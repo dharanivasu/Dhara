@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "b1380910-d343-449e-98c2-7970fffc6231",
+		"name": "capatt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6169096"
+	},
+	"item": [
+		{
+			"name": "MOnthly att",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/monthlyattendancefinalall?month=01",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"monthlyattendancefinalall"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LeaveLogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leavelogs",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leavelogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "holidaylist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/holidaylist",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"holidaylist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leavelog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeid\":\"\",\r\n    \"leavetype\":\"\",//CL,SL,EL\r\n    \"leavereason\":\"\",\r\n    \"leavedate\":\"\"//2023-04-01\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leaverequest",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leaverequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postholiday",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/postholiday?holidaydate=2024-02-11&holiday=true",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"postholiday"
+					],
+					"query": [
+						{
+							"key": "holidaydate",
+							"value": "2024-02-11"
+						},
+						{
+							"key": "holiday",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaveOB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeid\":\"\",\r\n    \"sickleave\":1,\r\n    \"casualleave\":0,\r\n    \"earnedleave\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leaveob",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leaveob"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaveapproval",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeid\":\"\",\r\n    \"leaveid\":\"\",// From logs\r\n    \"status\":1,// 1 Approved , 0 Declined\r\n    \"rejectedreason\":\"\",\r\n    \"managerid\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leaverequest",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leaverequest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "044a4c90-806a-49ea-aa70-36bce840c1fd",
+		"name": "USER-CREATION",
+		"description": "# About this collection\n\nThis collection helps ensure your API continues to work as expected after updates or changes. It contains sample requests for a series of tests that validate different aspects of an API, including:\n\n1. **Status code verification:** We'll check if the API returns the expected status codes for various requests, ensuring reliability and proper error handling.\n2. **JSON schema verification:** We'll make sure the JSON response conforms to a specified JSON Schema, ensuring API contracts are honored.\n3. **Response time verification:** We'll verify that the API's response time is within the acceptable range, providing a smooth user experience and optimizing performance.\n4. **Response body verification:** We'll validate the structure and content of the response body for accuracy, ensuring the integrity of the data and preventing potential issues downstream.\n5. **Header verification:** We'll confirm the presence and correct values of specific headers in the response, enabling secure and well-structured communication between your app and its users.\n    \n\n## **Using this collection**\n\n**Step 1:** Send the sample requests and view the response and test results.\n\n**Step 2:** Replace the sample request URLs with your desired API endpoints.\n\n**Step 3:** Customize the tests in the \"Tests\" tab if needed. Don't forget to save your changes.\n\n**Step 4:** Run the collection by selecting \"Run\".\n\n### Resources\n\n[Scripting in Postman](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/)\n\n[Test script examples](https://learning.postman.com/docs/writing-scripts/script-references/test-examples/)\n\n[Postman Sandbox API reference](https://learning.postman.com/docs/sending-requests/grpc/postman-sandbox-api/#writing-assertions)\n\n[Using the Collection Runner](https://learning.postman.com/docs/collections/running-collections/intro-to-collection-runs/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30612669"
+	},
+	"item": [
+		{
+			"name": "USER-POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"johndoe\",\r\n  \"password\": \"password123\",\r\n  \"userId\" : \"USER123\",\r\n  \"role\": {\r\n    \"roleName\": \"admin\"\r\n  },\r\n  \"project\": {\r\n    \"projectName\": \"Project A\",\r\n    \"projectId\": 1\r\n  },\r\n  \"team\": {\r\n    \"teamName\": \"Team Alpha\",\r\n    \"teamId\": 10\r\n  },\r\n  \"forms\": [\r\n    {\r\n      \"formId\": 101,\r\n      \"formName\": \"Form A\"\r\n    },\r\n    {\r\n      \"formId\": 102,\r\n      \"formName\": \"Form B\"\r\n    }\r\n  ],\r\n  \"module\": {\r\n    \"moduleId\": 202,\r\n    \"modules\": [\"feature1\", \"feature2\"]\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:6000/clapp-v3/users",
+				"description": "This request has a test using Postman's built-in support for JSON Schema verification to ensure that the response data matches the expected shape.\n\nSchema validation can be used to verify your API returns data in the right format, without worrying about the exact values. This might be helpful when testing various inputs for a consistent output format.\n\nLearn more about JSON Schema at [https://json-schema.org](https://json-schema.org/.)."
+			},
+			"response": []
+		},
+		{
+			"name": "USER-UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcklkIjoiVVNFUjEyMyIsImlhdCI6MTcxNjM1NjY2NiwiZXhwIjoxNzE2MzYwMjY2fQ.GTfYvVl1diBHme5pQHf0rW98GUF5g_iJnp9Hs_bW6eI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"johndoe\",\r\n  \"password\": \"password123\",\r\n  \"userId\" : \"USER123\",\r\n  \"role\": {\r\n    \"roleName\": \"admin\"\r\n  },\r\n  \"project\": {\r\n    \"projectName\": \"Project A\",\r\n    \"projectId\": 1\r\n  },\r\n  \"team\": {\r\n    \"teamName\": \"Team Alpha\",\r\n    \"teamId\": 10\r\n  },\r\n  \"forms\": [\r\n    {\r\n      \"formId\": 101,\r\n      \"formName\": \"Form A\"\r\n    },\r\n    {\r\n      \"formId\": 102,\r\n      \"formName\": \"Form B\"\r\n    }\r\n  ],\r\n  \"module\": {\r\n    \"moduleId\": 202,\r\n    \"modules\": [\"feature1\", \"feature2\"]\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:6000/clapp-v3/users/1",
+				"description": "This request has a test using Postman's built-in support for JSON Schema verification to ensure that the response data matches the expected shape.\n\nSchema validation can be used to verify your API returns data in the right format, without worrying about the exact values. This might be helpful when testing various inputs for a consistent output format.\n\nLearn more about JSON Schema at [https://json-schema.org](https://json-schema.org/.)."
+			},
+			"response": []
+		},
+		{
+			"name": "USER-GET",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlck5hbWUiOiJqb2huZG9lIiwiaWF0IjoxNzE2MzU1NTYyLCJleHAiOjE3MTYzNTkxNjJ9.Vq6qh9IZNjfYcgRUxVPhFjQ_EYIFf7uU1ayk_Bw1U7s"
+					}
+				],
+				"url": "http://localhost:6000/clapp-v3/users"
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"USER123\",\r\n    \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:6000/clapp-v3/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "GET-One-User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlck5hbWUiOiJqb2huZG9lIiwiaWF0IjoxNzE2MzU1NTYyLCJleHAiOjE3MTYzNTkxNjJ9.Vq6qh9IZNjfYcgRUxVPhFjQ_EYIFf7uU1ayk_Bw1U7s"
+					}
+				],
+				"url": "http://localhost:6000/clapp-v3/users/3"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlck5hbWUiOiJqb2huZG9lIiwiaWF0IjoxNzE2MzU1NTYyLCJleHAiOjE3MTYzNTkxNjJ9.Vq6qh9IZNjfYcgRUxVPhFjQ_EYIFf7uU1ayk_Bw1U7s"
+					}
+				],
+				"url": "http://localhost:6000/clapp-v3/users/1"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://postman-echo.com"
+		},
+		{
+			"key": "http://localhost:6000/clapp-v3/users",
+			"value": "baseUrl"
+		}
+	]
+}

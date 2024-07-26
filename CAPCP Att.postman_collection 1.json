@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "9b85138e-38de-44aa-9385-29f7bb37a8fc",
+		"name": "CAPCP Att",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6169096"
+	},
+	"item": [
+		{
+			"name": "DailyAllAttendance Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/dailyattendanceall?attdate=2023-12-21",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"dailyattendanceall"
+					],
+					"query": [
+						{
+							"key": "attdate",
+							"value": "2023-12-21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DailyAllAttendanceFinal Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/dailyfinalattendanceall?attdate=2023-12-21",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"dailyfinalattendanceall"
+					],
+					"query": [
+						{
+							"key": "attdate",
+							"value": "2023-12-21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attendanceinfinal Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"date\": \"2024-01-23\",\r\n\"empid\":\"65992330e9329982d6d58d99\",\r\n                        \"clock_in\": \"2024-01-23T04:21:41.889Z\",\r\n                        \"clock_out\": \"2024-01-23T04:51:41.889Z\",\r\n                        \"status\": \"Present\", //status text\r\n                        \"logid\": \"65af3ed546e476d516949001\",\r\n                        \"factor\":1, //0 - leave ,0.5 half day\r\n                        \"sickleave\": false, \r\n                        \"earnedleave\": false,\r\n                        \"casualleave\": false,\r\n                        \"compoff\": false,\r\n                        \"holidaywork\": false\r\n                        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/capcp/attendance/finalattendance",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"capcp",
+						"attendance",
+						"finalattendance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "monthlyattendance Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/capcp/attendance/monthlyattendance?month=12",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"capcp",
+						"attendance",
+						"monthlyattendance"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getindividualdailyattendance Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/capcp/attendance/getindividualdailyattendance?empid=6579391ce8fff0a40eef3fff&attdate=2023-12-21",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"capcp",
+						"attendance",
+						"getindividualdailyattendance"
+					],
+					"query": [
+						{
+							"key": "empid",
+							"value": "6579391ce8fff0a40eef3fff"
+						},
+						{
+							"key": "attdate",
+							"value": "2023-12-21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get10attendance Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/last10attendanceemp?empid=6579391ce8fff0a40eef3fff",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"last10attendanceemp"
+					],
+					"query": [
+						{
+							"key": "empid",
+							"value": "6579391ce8fff0a40eef3fff"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
