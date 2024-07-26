@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "84aa6493-813b-4660-87ea-bc0dcbd3f494",
+		"name": "CAPCP-ORG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30612669"
+	},
+	"item": [
+		{
+			"name": "EMPLOYEE",
+			"item": [
+				{
+					"name": "create-emp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NameOfCandidate\":\"Admin\",\r\n    \"DateOfBirth\":\"12-09-2020\",\r\n    \"Designation\":\"Director\",\r\n    \"Team\":\"Admin\",\r\n    \"ContactNumber\":\"9632587410\",\r\n    \"Password\":\"12\"\r\n}       \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/capcp/employee/add"
+					},
+					"response": []
+				},
+				{
+					"name": "get-employee",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNzE2NjY3LCJleHAiOjE3MzIyNTI2Njd9.yYts6CyAcU9xvi7QUqDZGzFDgg6GuW7YzzDiRiSnFHg",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/capcp/employee/getbyid/655dc3f283a07ef5772df33d"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOGIN",
+			"item": [
+				{
+					"name": "user-login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\" : \"asdasd\",\r\n    \"Password\":\"adasdasdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/capcp/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ROLES",
+			"item": [
+				{
+					"name": "roles-access",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAyIiwiaWF0IjoxNzAwNTY3NzAxLCJleHAiOjE3MDA1NzEzMDF9.y3Dp1PC1wiZNb9tRMp63HB5eUCryhihN8tX1pvTXmck",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Team\": \"Admin\",\r\n  \"Role\": [\"admin\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/capcp/roleaccess/add"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LEAD",
+			"item": [
+				{
+					"name": "post-lead",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNzE2NjY3LCJleHAiOjE3MzIyNTI2Njd9.yYts6CyAcU9xvi7QUqDZGzFDgg6GuW7YzzDiRiSnFHg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2023-12-01\",\r\n    \"Source\": \"LinkedIn\",\r\n    \"Pilot\": \"Admin\",\r\n    \"companyName\": \"Example Corp\",\r\n    \"category\": \"Technology\",\r\n    \"contactName\": \"Alice Smith\",\r\n    \"departmentName\": \"Sales\",\r\n    \"phoneNumber\": \"123-456-7890\",\r\n    \"email\": \"alice@example.com\",\r\n    \"businessVertical\": \"IT\",\r\n    \"leadDescription\": [\r\n        {\r\n            \"date\": \"2023-11-16\",\r\n            \"description\": \"sdad\",\r\n            \"status\": \"pending\",\r\n            \"statusRequest\": \"New Lead\"\r\n\r\n        }\r\n    ],\r\n    \"status\": \"Active\",\r\n    \"tasks\": [\r\n        {\r\n            \"title\": \"Example Task 1\",\r\n            \"description\": \"Example Task Description 1\",\r\n            \"responsible\": \"John Doe\",\r\n            \"assignedDate\": \"2023-12-01T12:00:00Z\",\r\n            \"targetDate\": \"2023-12-07T12:00:00Z\",\r\n            \"remark\": \"Example Remark 1\",\r\n            \"status\": \"pending\",\r\n            \"statusRequest\": \"status request 1\"\r\n        },\r\n        {\r\n            \"title\": \"Example Task 2\",\r\n            \"description\": \"Example Task Description 2\",\r\n            \"responsible\": \"Jane Doe\",\r\n            \"assignedDate\": \"2023-12-02T12:00:00Z\",\r\n            \"targetDate\": \"2023-12-10T12:00:00Z\",\r\n            \"remark\": \"Example Remark 2\",\r\n            \"status\": \"completed\",\r\n            \"statusRequest\": \"status request 2\"\r\n        },\r\n        {\r\n            \"title\": \"Example Task 3\",\r\n            \"description\": \"Example Task Description 3\",\r\n            \"responsible\": \"Jane Doe\",\r\n            \"assignedDate\": \"2023-12-02T12:00:00Z\",\r\n            \"targetDate\": \"2023-12-10T12:00:00Z\",\r\n            \"remark\": \"Example Remark 3\",\r\n            \"status\": \"completed\",\r\n            \"statusRequest\": \"status request 3\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/capcp/lead/create"
+					},
+					"response": []
+				},
+				{
+					"name": "update-lead",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNzE2NjY3LCJleHAiOjE3MzIyNTI2Njd9.yYts6CyAcU9xvi7QUqDZGzFDgg6GuW7YzzDiRiSnFHg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2023-12-01T00:00:00.000Z\",\r\n    \"Source\": \"coldcalls\",\r\n    \"Pilot\": \"Admin\",\r\n    \"companyName\": \"Example Corp\",\r\n    \"category\": \"Option 3\",\r\n    \"contactName\": \"Alice Smith\",\r\n    \"departmentName\": \"Sales\",\r\n    \"phoneNumber\": \"123-456-7890\",\r\n    \"email\": \"alice@example.com\",\r\n    \"businessVertical\": \"concerns\",\r\n    \"leadDescription\": [\r\n        {\r\n            \"date\": \"2023-11-28T10:50:14.069Z\",\r\n            \"description\": \"sdad\",\r\n            \"status\": \"pending\",\r\n            \"statusRequest\": \"New Lead\",\r\n            \"_id\": \"6565c5e6d15459cf95ae112c\"\r\n        },\r\n        {\r\n            \"date\": \"2023-11-28T10:50:14.069Z\",\r\n            \"description\": \"sdad\",\r\n            \"status\": \"pending\",\r\n            \"statusRequest\": \"Contact Establish\",\r\n            \"_id\": \"6565c5e6d15459cf95ae112d\"\r\n        },\r\n        {\r\n            \"date\": \"2023-11-28T10:50:14.069Z\",\r\n            \"description\": \"sdad\",\r\n            \"status\": \"pending\",\r\n            \"statusRequest\": \"Technicle Meeting\",\r\n            \"_id\": \"6565c5e6d15459cf95ae112e\"\r\n        },\r\n        {\r\n            \"date\": \"2023-11-28T10:50:14.069Z\",\r\n            \"description\": \"sdad\",\r\n            \"status\": \"pending\",\r\n            \"statusRequest\": \"Hold\",\r\n            \"_id\": \"6565c5e6d15459cf95ae112f\"\r\n        },\r\n        {\r\n            \"date\": \"2023-11-28T10:50:14.069Z\",\r\n            \"description\": \"sdad\",\r\n            \"status\": \"pending\",\r\n            \"statusRequest\": \"Reject\",\r\n            \"_id\": \"6565c5e6d15459cf95ae1130\"\r\n        },\r\n        {\r\n            \"date\": \"2023-11-28T10:50:14.069Z\",\r\n            \"description\": \"sdad\",\r\n            \"status\": \"pending\",\r\n            \"statusRequest\": \"Conform\",\r\n            \"_id\": \"6565c5e6d15459cf95ae1131\"\r\n        },\r\n        {\r\n            \"date\": \"2023-11-03\",\r\n            \"description\": \"xxxx\",\r\n            \"statusRequest\": \"Hold\",\r\n            \"status\": \"Approval\",\r\n            \"_id\": \"temp_h66v53cga\"\r\n        }\r\n    ],\r\n    \"tasks\": [\r\n        {\r\n            \"title\": \"Example Task 1\",\r\n            \"description\": \"Example Task Description 1\",\r\n            \"responsible\": \"John Doe\",\r\n            \"assignedDate\": \"2023-12-01T12:00:00.000Z\",\r\n            \"targetDate\": \"2023-12-07T12:00:00.000Z\",\r\n            \"remark\": \"Example Remark 1\",\r\n            \"status\": \"pending\",\r\n            \"taskId\": \"#TASK0001\",\r\n            \"statusRequest\": \"status request 1\",\r\n            \"_id\": \"6565c5e6d15459cf95ae1132\"\r\n        },\r\n        {\r\n            \"title\": \"Example Task 2\",\r\n            \"description\": \"Example Task Description 2\",\r\n            \"responsible\": \"Jane Doe\",\r\n            \"assignedDate\": \"2023-12-02T12:00:00.000Z\",\r\n            \"targetDate\": \"2023-12-10T12:00:00.000Z\",\r\n            \"remark\": \"Example Remark 2\",\r\n            \"status\": \"completed\",\r\n            \"taskId\": \"#TASK0002\",\r\n            \"statusRequest\": \"status request 2\",\r\n            \"_id\": \"6565c5e6d15459cf95ae1133\"\r\n        },\r\n        {\r\n            \"title\": \"x\",\r\n            \"description\": \"xxx\",\r\n            \"responsible\": \"xx\",\r\n            \"remark\": \"xx\",\r\n            \"assignedDate\": \"2023-11-08\",\r\n            \"targetDate\": \"2023-11-08\",\r\n            \"status\": \"On Going\",\r\n            \"_id\": \"temp_qlqds9tos\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/capcp/lead/update/6566ebcb061fe8246b0f6192"
+					},
+					"response": []
+				},
+				{
+					"name": "get-lead",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNjQ4MDAzLCJleHAiOjE3MDA2NTE2MDN9.UZKvxa1bpNiSf7wDSITxUHb4DuUXyZg-IrhNnRTqNZs",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/capcp/lead/get"
+					},
+					"response": []
+				},
+				{
+					"name": "get-id-lead",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNzE2NjY3LCJleHAiOjE3MzIyNTI2Njd9.yYts6CyAcU9xvi7QUqDZGzFDgg6GuW7YzzDiRiSnFHg",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/capcp/lead/getbyid/655f3b9014acaacc71606fd7"
+					},
+					"response": []
+				},
+				{
+					"name": "delete-lead",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RFQ",
+			"item": [
+				{
+					"name": "post-lead",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNzE2NjY3LCJleHAiOjE3MzIyNTI2Njd9.yYts6CyAcU9xvi7QUqDZGzFDgg6GuW7YzzDiRiSnFHg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2023-12-01\",\r\n    \"Source\": \"Web\",\r\n    \"leadNumber\": \"123333\",\r\n    \"Pilot\": \"Admin\",\r\n    \"companyName\": \"Example Corp\",\r\n    \"category\": \"Technology\",\r\n    \"contactName\": \"Alice Smith\",\r\n    \"departmentName\": \"Sales\",\r\n    \"phoneNumber\": \"123-456-7890\",\r\n    \"email\": \"alice@example.com\",\r\n    \"businessVertical\": \"IT\",\r\n    \"approximateValue\" : \"1233\",\r\n    \"rfqDescription\": [\r\n        {\r\n            \"date\": \"2023-12-01\",\r\n            \"description\": \"Interested in our services\",\r\n            \"status\": \"TCO Sddubmitted\",\r\n            \"statusRequest\": \"contact establish\"\r\n        },\r\n        {\r\n            \"date\": \"2023-12-01\",\r\n            \"description\": \"Interested in our services\",\r\n            \"status\": \"Open\",\r\n            \"statusRequest\": \"\"\r\n        }\r\n    ],\r\n    \"status\": \"Active\",\r\n    \"tasks\": [\r\n        {\r\n            \"title\": \"Follow-up call\",\r\n            \"description\": \"Call the lead to discuss requirements\",\r\n            \"responsible\": \"Sales Team\",\r\n            \"remark\": \"Urgent\",\r\n            \"status\": \"Pending\",\r\n            \"statusRequest\": \"\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/capcp/rfq/create"
+					},
+					"response": []
+				},
+				{
+					"name": "update-lead",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNzE2NjY3LCJleHAiOjE3MzIyNTI2Njd9.yYts6CyAcU9xvi7QUqDZGzFDgg6GuW7YzzDiRiSnFHg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2023-12-01\",\r\n    \"Source\": \"Web updates 123123\",\r\n    \"leadNumber\" :\"12333312321\",\r\n    \"Pilot\": \"Admin\",\r\n    \"companyName\": \"Example Corp\",\r\n    \"category\": \"Technology\",\r\n    \"contactName\": \"Alice Smith\",\r\n    \"departmentName\": \"Sales\",\r\n    \"phoneNumber\": \"123-456-7890\",\r\n    \"email\": \"alice@example.com\",\r\n    \"businessVertical\": \"IT\",\r\n    \"rfqDescription\": [\r\n        {\r\n            \"date\": \"2023-12-01\",\r\n            \"description\": \"Interested in our services upodate\",\r\n            \"status\": \"pending\",\r\n            \"statusRequest\": \"contact establish update\"\r\n        },\r\n        {\r\n            \"date\": \"2023-12-01\",\r\n            \"description\": \"Interested in our services\",\r\n            \"status\": \"TCO Submitted\",\r\n            \"statusRequest\": \"\"\r\n        }\r\n    ],\r\n    \"status\": \"Active\",\r\n    \"approximateValue\": \"$hh100\",\r\n    \"tasks\": [\r\n        {\r\n            \"title\": \"Follow-up call\",\r\n            \"description\": \"Call the lead to discuss requirements update\",\r\n            \"responsible\": \"Sales Team\",\r\n            \"remark\": \"Urgent update\",\r\n            \"status\": \"Pending\",\r\n            \"statusRequest\": \"\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/capcp/rfq/update/65602f2aff4d5e1f681ae9fc"
+					},
+					"response": []
+				},
+				{
+					"name": "get-lead",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNjQ4MDAzLCJleHAiOjE3MDA2NTE2MDN9.UZKvxa1bpNiSf7wDSITxUHb4DuUXyZg-IrhNnRTqNZs",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/capcp/lead/get"
+					},
+					"response": []
+				},
+				{
+					"name": "get-id-lead",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNjQ4MDAzLCJleHAiOjE3MDA2NTE2MDN9.UZKvxa1bpNiSf7wDSITxUHb4DuUXyZg-IrhNnRTqNZs",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/capcp/lead/getbyid/655dd4f66dc67043885e6a4e"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CATEGORY",
+			"item": [
+				{
+					"name": "create-category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNzE2NjY3LCJleHAiOjE3MzIyNTI2Njd9.yYts6CyAcU9xvi7QUqDZGzFDgg6GuW7YzzDiRiSnFHg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" :\"new category 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/capcp/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "get-category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNzE2NjY3LCJleHAiOjE3MzIyNTI2Njd9.yYts6CyAcU9xvi7QUqDZGzFDgg6GuW7YzzDiRiSnFHg",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/capcp/categories"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PROJECT",
+			"item": [
+				{
+					"name": "create-project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUNvZGUiOiJDQUUwMDAzIiwiaWF0IjoxNzAwNzE2NjY3LCJleHAiOjE3MzIyNTI2Njd9.yYts6CyAcU9xvi7QUqDZGzFDgg6GuW7YzzDiRiSnFHg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rfqNumber\": \"RFQ001/23-24\",\r\n  \"companyName\": \"ABC Corp\",\r\n  \"assignedDate\": \"2023-11-25\",\r\n  \"targetDate\": \"2024-01-31\",\r\n  \"status\": \"In Progress\",\r\n  \"description\": \"This is a test project.\",\r\n  \"requirePO\": false,\r\n  \"poNumber\": \"PO123\",\r\n  \"projectAllocation\": [\r\n    {\r\n      \"team\": \"Development\",\r\n      \"employeeName\": \"Admin\",\r\n      \"employeeCode\": \"CAE0003\",\r\n      \"fromDate\": \"2023-11-25\",\r\n      \"toDate\": \"2023-12-15\",\r\n      \"percentage\": 50,\r\n      \"location\": \"Office\"\r\n    },\r\n    {\r\n      \"team\": \"Development\",\r\n      \"employeeName\": \"Admin111\",\r\n      \"employeeCode\": \"CAE000311\",\r\n      \"fromDate\": \"2023-11-25\",\r\n      \"toDate\": \"2023-12-15\",\r\n      \"percentage\": 50,\r\n      \"location\": \"Office\"\r\n    },\r\n    {\r\n      \"team\": \"Testing\",\r\n     \"employeeName\": \"Admin22\",\r\n      \"employeeCode\": \"CAE000322\",\r\n      \"fromDate\": \"2023-11-25\",\r\n      \"toDate\": \"2023-12-15\",\r\n      \"percentage\": 50,\r\n      \"location\": \"Remote\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/capcp/project/create"
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-project",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

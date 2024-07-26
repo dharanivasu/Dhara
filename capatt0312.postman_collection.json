@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "b1380910-d343-449e-98c2-7970fffc6231",
+		"name": "capatt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6169096"
+	},
+	"item": [
+		{
+			"name": "MOnthly att",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/monthlyattendancefinalall?month=01",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"monthlyattendancefinalall"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LeaveLogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leavelogs",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leavelogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LeaveLogsvyempid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leavelogs",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leavelogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "holidaylist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/holidaylist",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"holidaylist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getleavebalance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leavebalance?employeeid=65992330e9329982d6d58d99",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leavebalance"
+					],
+					"query": [
+						{
+							"key": "employeeid",
+							"value": "65992330e9329982d6d58d99"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leavelog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeid\":\"65992330e9329982d6d58d99\",\r\n    \"leavetype\":\"CL\",//CL,SL,EL\r\n    \"leavereason\":\"Not well\",\r\n    \"leavefromdate\":\"2024-02-20\",//2023-04-01\r\n    \"leavetodate\":\"2024-02-20\"//2023-04-01\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leaverequest",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leaverequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postholiday",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/postholiday?holidaydate=2024-02-11&holiday=true",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"postholiday"
+					],
+					"query": [
+						{
+							"key": "holidaydate",
+							"value": "2024-02-11"
+						},
+						{
+							"key": "holiday",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaveOB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeid\":\"65992330e9329982d6d58d99\",\r\n    \"sickleave\":1,\r\n    \"casualleave\":2,\r\n    \"earnedleave\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leaveob",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leaveob"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaveOBbulk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"oblist\":[{\"employeeid\":\"65992330e9329982d6d58d59\",\"casualleave\":7,\"sickleave\":8,\"earnedleave\":45},{\"employeeid\":\"65992330e9329982d6d58d5a\",\"casualleave\":6,\"sickleave\":7,\"earnedleave\":45},{\"employeeid\":\"65992330e9329982d6d58d5c\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":26},{\"employeeid\":\"65992330e9329982d6d58d6c\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":19},{\"employeeid\":\"65992330e9329982d6d58d74\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":7},{\"employeeid\":\"65992330e9329982d6d58d78\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":18},{\"employeeid\":\"65992330e9329982d6d58d7c\",\"casualleave\":3,\"sickleave\":4,\"earnedleave\":8},{\"employeeid\":\"65992330e9329982d6d58d94\",\"casualleave\":2,\"sickleave\":3,\"earnedleave\":5},{\"employeeid\":\"65992330e9329982d6d58d8b\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58d9d\",\"casualleave\":4,\"sickleave\":5,\"earnedleave\":8},{\"employeeid\":\"65992330e9329982d6d58d9e\",\"casualleave\":4,\"sickleave\":5,\"earnedleave\":8},{\"employeeid\":\"65992330e9329982d6d58d9f\",\"casualleave\":5,\"sickleave\":5,\"earnedleave\":11},{\"employeeid\":\"65992330e9329982d6d58da1\",\"casualleave\":3,\"sickleave\":5,\"earnedleave\":11},{\"employeeid\":\"65992330e9329982d6d58db8\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":2},{\"employeeid\":\"65992330e9329982d6d58dbc\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":1},{\"employeeid\":\"65992330e9329982d6d58dc7\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58ddf\",\"casualleave\":3,\"sickleave\":3,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58de4\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58df1\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58df6\",\"casualleave\":4,\"sickleave\":4,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58df7\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58df8\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58e05\",\"casualleave\":0,\"sickleave\":1,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58e06\",\"casualleave\":0,\"sickleave\":1,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58e5c\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58d6d\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":20},{\"employeeid\":\"65992330e9329982d6d58dc0\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":2},{\"employeeid\":\"65992330e9329982d6d58db6\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":1},{\"employeeid\":\"65992330e9329982d6d58dc4\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":3},{\"employeeid\":\"65992330e9329982d6d58d58\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":45},{\"employeeid\":\"65992330e9329982d6d58d5d\",\"casualleave\":2,\"sickleave\":3,\"earnedleave\":30},{\"employeeid\":\"65992330e9329982d6d58d6e\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":19},{\"employeeid\":\"65992330e9329982d6d58d79\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":18},{\"employeeid\":\"65992330e9329982d6d58d8a\",\"casualleave\":3,\"sickleave\":6,\"earnedleave\":13},{\"employeeid\":\"65992330e9329982d6d58d8f\",\"casualleave\":3,\"sickleave\":4,\"earnedleave\":12},{\"employeeid\":\"65992330e9329982d6d58d93\",\"casualleave\":4,\"sickleave\":6,\"earnedleave\":8},{\"employeeid\":\"65992330e9329982d6d58db0\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":2},{\"employeeid\":\"65992330e9329982d6d58db3\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":4},{\"employeeid\":\"65992330e9329982d6d58d59\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":3},{\"employeeid\":\"65992330e9329982d6d58dbe\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":3},{\"employeeid\":\"65992330e9329982d6d58dc1\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":2},{\"employeeid\":\"65992330e9329982d6d58dc6\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58dc8\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":1},{\"employeeid\":\"65992330e9329982d6d58dcd\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":1},{\"employeeid\":\"65992330e9329982d6d58dd1\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":4},{\"employeeid\":\"659e328e5465fc3e9d3a2a5a\",\"casualleave\":1,\"sickleave\":0,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58d69\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":14},{\"employeeid\":\"659e2f445465fc3e9d3a2a28\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":0},{\"employeeid\":\"659e330f5465fc3e9d3a2a64\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"659e33485465fc3e9d3a2a69\",\"casualleave\":0,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"659e33725465fc3e9d3a2a6e\",\"casualleave\":0,\"sickleave\":1,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58d8d\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":1},{\"employeeid\":\"65992330e9329982d6d58d65\",\"casualleave\":3,\"sickleave\":3,\"earnedleave\":16},{\"employeeid\":\"65992330e9329982d6d58d6a\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":13},{\"employeeid\":\"65992330e9329982d6d58d6b\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":15},{\"employeeid\":\"65992330e9329982d6d58d87\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":14},{\"employeeid\":\"65992330e9329982d6d58d99\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":2},{\"employeeid\":\"65992330e9329982d6d58dae\",\"casualleave\":3,\"sickleave\":3,\"earnedleave\":3},{\"employeeid\":\"65992330e9329982d6d58e01\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":-7},{\"employeeid\":\"65992330e9329982d6d58de2\",\"casualleave\":6,\"sickleave\":4,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58d70\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":10},{\"employeeid\":\"65992330e9329982d6d58d73\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":5},{\"employeeid\":\"65992330e9329982d6d58df9\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58d86\",\"casualleave\":4,\"sickleave\":4,\"earnedleave\":11},{\"employeeid\":\"65992330e9329982d6d58dad\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":4},{\"employeeid\":\"65992330e9329982d6d58dd0\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":2},{\"employeeid\":\"65992330e9329982d6d58d5b\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":40},{\"employeeid\":\"65992330e9329982d6d58d5f\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":36},{\"employeeid\":\"65992330e9329982d6d58d62\",\"casualleave\":3,\"sickleave\":3,\"earnedleave\":25},{\"employeeid\":\"65992330e9329982d6d58d75\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":9},{\"employeeid\":\"65992330e9329982d6d58d7f\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":1},{\"employeeid\":\"65992330e9329982d6d58d89\",\"casualleave\":4,\"sickleave\":6,\"earnedleave\":9},{\"employeeid\":\"65992330e9329982d6d58d8e\",\"casualleave\":6,\"sickleave\":7,\"earnedleave\":14},{\"employeeid\":\"65992330e9329982d6d58d90\",\"casualleave\":2,\"sickleave\":3,\"earnedleave\":9},{\"employeeid\":\"65992330e9329982d6d58d97\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":4},{\"employeeid\":\"65992330e9329982d6d58d98\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":1},{\"employeeid\":\"65992330e9329982d6d58da4\",\"casualleave\":2,\"sickleave\":5,\"earnedleave\":4},{\"employeeid\":\"65992330e9329982d6d58da5\",\"casualleave\":4,\"sickleave\":5,\"earnedleave\":9},{\"employeeid\":\"65992330e9329982d6d58da6\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":4},{\"employeeid\":\"65992330e9329982d6d58da8\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":7},{\"employeeid\":\"65992330e9329982d6d58d64\",\"casualleave\":3,\"sickleave\":4,\"earnedleave\":8},{\"employeeid\":\"65992330e9329982d6d58dab\",\"casualleave\":3,\"sickleave\":4,\"earnedleave\":6},{\"employeeid\":\"65992330e9329982d6d58dac\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":3},{\"employeeid\":\"65992330e9329982d6d58dda\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":-3},{\"employeeid\":\"65992330e9329982d6d58def\",\"casualleave\":0,\"sickleave\":1,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58df0\",\"casualleave\":0,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58df2\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58df3\",\"casualleave\":2,\"sickleave\":3,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58df4\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58d96\",\"casualleave\":3,\"sickleave\":3,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58dfb\",\"casualleave\":0,\"sickleave\":1,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58dfe\",\"casualleave\":2,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58dff\",\"casualleave\":3,\"sickleave\":4,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58e00\",\"casualleave\":3,\"sickleave\":3,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58d9e\",\"casualleave\":0,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58e03\",\"casualleave\":1,\"sickleave\":2,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58d60\",\"casualleave\":3,\"sickleave\":4,\"earnedleave\":30},{\"employeeid\":\"65992330e9329982d6d58d91\",\"casualleave\":2,\"sickleave\":3,\"earnedleave\":5},{\"employeeid\":\"65992330e9329982d6d58d96\",\"casualleave\":2,\"sickleave\":3,\"earnedleave\":3},{\"employeeid\":\"65992330e9329982d6d58daf\",\"casualleave\":1,\"sickleave\":1,\"earnedleave\":3},{\"employeeid\":\"65992330e9329982d6d58ded\",\"casualleave\":0,\"sickleave\":0,\"earnedleave\":0},{\"employeeid\":\"65992330e9329982d6d58e04\",\"casualleave\":3,\"sickleave\":4,\"earnedleave\":0}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leaveobbulk",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leaveobbulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaveapproval",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeid\":\"\",\r\n    \"leaveid\":\"\",// From logs\r\n    \"status\":1,// 1 Approved , 0 Declined\r\n    \"rejectedreason\":\"\",\r\n    \"managerid\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/leaverequest",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"leaverequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcompoffs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/compoffs",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"compoffs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalattendance - Team",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/dailyteamfinalattendanceall?curdate=2023-12-02&Team=IT",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"dailyteamfinalattendanceall"
+					],
+					"query": [
+						{
+							"key": "curdate",
+							"value": "2023-12-02"
+						},
+						{
+							"key": "Team",
+							"value": "IT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalattendance - LOcation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://org.capcp.in/orgapiatt/capcp/attendance/dailylocationfinalattendanceall?curdate=2023-12-02&Location=Chennai",
+					"protocol": "https",
+					"host": [
+						"org",
+						"capcp",
+						"in"
+					],
+					"path": [
+						"orgapiatt",
+						"capcp",
+						"attendance",
+						"dailylocationfinalattendanceall"
+					],
+					"query": [
+						{
+							"key": "curdate",
+							"value": "2023-12-02"
+						},
+						{
+							"key": "Location",
+							"value": "Chennai"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
